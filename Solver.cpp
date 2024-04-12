@@ -1,19 +1,13 @@
-#include "Parser.cpp"
+#include "Solver.h"
 #include <iostream>
-#include <ctime>
-#include <math.h>
-#include <cmath>
-#include <vector>
-#include <algorithm>
 using namespace std;
 
-class Solver: public  Parser{
-    public:
-    double dist(int i,int j){
+
+    double Solver::dist(int i,int j){
         return sqrt((x[i]-x[j])*(x[i]-x[j])+(y[i]-y[j])*(y[i]-y[j]));
     }
     
-    Solver(string f_name): Parser(f_name){
+    Solver::Solver(string f_name): Parser(f_name){
         vector <int> track(N);
         //create a random path
         for(int q=0;q<N;q++){
@@ -40,4 +34,3 @@ class Solver: public  Parser{
       cout<<track[q]<<" ";
    cout<<0<<endl;
     }
-};
