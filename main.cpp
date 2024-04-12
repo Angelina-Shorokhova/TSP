@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "Solver.cpp"
+#include "Solver.h"
 using namespace std;
 
 int main()
